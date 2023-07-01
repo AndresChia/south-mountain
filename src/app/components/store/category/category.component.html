@@ -1,0 +1,19 @@
+<div class="container-category">
+  <div class="container-side-bar">
+    <app-category-sidebar></app-category-sidebar>
+  </div>
+  <div class="container-category-store">
+    <app-filters></app-filters>
+    <app-banner-minium-order></app-banner-minium-order>
+    <mat-divider class="container-home-store__divider"></mat-divider>
+
+    <app-card-product
+      title="Skim"
+      [labels]="['Organic', 'Local', 'Glutten-free']"
+      [price]="3.49"
+      [quantity]="1"
+      [units]="['1/2 gallon', 'Quart']"
+      description='Happy, pasture-raised, cows. No added hormones or antibiotics. Fresh from "moo" to you in 24 hours. No preservatives added. Comes chilled in a glass quart bottle.'
+    ></app-card-product>
+  </div>
+</div>

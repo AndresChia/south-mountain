@@ -1,0 +1,39 @@
+<div class="container-grid">
+  <div class="container-icon">
+    <img
+      src="./../../../assets/images/logo.svg"
+      alt="sout-mountain-creamery-logo"
+    />
+  </div>
+  <div class="container-form">
+    <h1 class="container-form__title">Welcome!</h1>
+
+    <div class="container-fields">
+      <app-input
+        class="container-fields-input"
+        [data]="email"
+        (ngModelChange)="email = $event"
+      >
+        <h5 label class="container-fields-input__label">Email</h5>
+      </app-input>
+      <app-input
+        class="container-fields-input"
+        [data]="password"
+        (ngModelChange)="password = $event"
+        [type]="typePassword"
+      >
+        <h5 label class="container-fields-input__label">Password</h5>
+      </app-input>
+      <app-check-box class="container-fields__check-box">
+        Keep me logged in
+      </app-check-box>
+    </div>
+
+    <div class="container-action">
+      <app-button class="container-action__button" (click)="logIn()">
+        LOG IN
+      </app-button>
+      <h6 class="container-action__forgot-password">Forgot your password?</h6>
+    </div>
+  </div>
+</div>

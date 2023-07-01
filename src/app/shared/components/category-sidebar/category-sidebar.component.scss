@@ -1,0 +1,24 @@
+@import "/src/foundations/typography/typography.scss";
+
+.title {
+  margin: 50px 25px;
+  cursor: pointer;
+}
+
+.container-categories {
+  &__category-title {
+    margin: 0px 25px;
+    @include h5-bold;
+    cursor: pointer;
+  }
+
+  &__divider{
+    margin: 0px 0px 35px 0px;
+  }
+
+  &__subcategory-title {
+    margin: 9px 45px;
+    @include h6-regular;
+    cursor: pointer;
+  }
+}

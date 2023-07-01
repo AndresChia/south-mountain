@@ -1,0 +1,35 @@
+<h3
+  class="title"
+  [routerLink]="['/store/home']"
+  routerLinkActive="router-link-active"
+>
+  Our products
+</h3>
+
+<div class="container-categories">
+  <ng-container *ngFor="let category of categories">
+    <h5
+      class="container-categories__category-title"
+      [routerLink]="['/store/category/' + category.id]"
+      routerLinkActive="router-link-active"
+    >
+      {{ category.title }}
+    </h5>
+    <ng-container
+      *ngFor="let subCategory of category.subCategories; last as isLast"
+    >
+      <h6
+        class="container-categories__subcategory-title"
+        [routerLink]="[
+          '/store/category/' + category.id + '/subcategory/' + subCategory.id
+        ]"
+        routerLinkActive="router-link-active"
+      >
+        {{ subCategory.title }}
+      </h6>
+      <span *ngIf="isLast"><br /></span>
+    </ng-container>
+
+    <mat-divider *ngIf="category.divider" class="container-categories__divider"></mat-divider>
+  </ng-container>
+</div>

@@ -1,0 +1,25 @@
+@import "/src/foundations/colors/colors.scss";
+
+.container-card {
+  border: 1px solid $wireframes-colors-4;
+  border-radius: 8px;
+  width: 350px;
+  height: 574px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container-chips {
+  pointer-events: none;
+
+}
+
+.container-labels {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  &__favorite {
+    color: $primary-color-1;
+  }
+}

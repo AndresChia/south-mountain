@@ -1,0 +1,75 @@
+@import "/src/foundations/typography/typography.scss";
+@import "/src/foundations/colors/colors.scss";
+@import "/src/foundations/responsive/responsive.scss";
+
+.container-header {
+  background-color: $primary-color-1;
+  height: 85px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-logo {
+  order: 1;
+  margin-left: 40px;
+  &__image {
+    cursor: pointer;
+  }
+
+  @include media(small, medium) {
+    order: 2;
+    margin-left: 0px;
+  }
+}
+
+.container-menu {
+  order: 2;
+  @include media(small, medium) {
+    order: 1;
+    &__icon {
+      margin-left: 15px;
+      color: $base-color-2;
+    }
+  }
+}
+
+.container-settings {
+  order: 3;
+  margin-right: 40px;
+  @include media(small, medium) {
+    &__icon {
+      color: $base-color-2;
+    }
+    margin-right: 15px;
+  }
+}
+
+.container-button-menu-title {
+  color: $base-color-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include h5-regular;
+  &__icon {
+    color: $base-color-2;
+  }
+}
+
+.container-settings {
+  &__title {
+    color: $base-color-2;
+  }
+}
+
+.container-settings-title {
+  color: $base-color-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include h5-bold;
+  &__icon {
+    margin-right: 5px;
+    color: $base-color-2;
+  }
+}

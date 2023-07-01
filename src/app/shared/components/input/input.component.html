@@ -1,0 +1,11 @@
+<div class="container-input">
+  <ng-content select="[label]"></ng-content>
+  <mat-form-field class="container-input">
+    <input
+      matInput
+      [type]="type"
+      [(ngModel)]="data"
+      (ngModelChange)="ngModelChange.emit($event)"
+    />
+  </mat-form-field>
+</div>

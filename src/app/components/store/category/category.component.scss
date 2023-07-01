@@ -1,0 +1,17 @@
+@import "/src/foundations/colors/colors.scss";
+
+.container-side-bar {
+  background-color: $primary-color-4;
+  height: calc(100vh - 85px);
+  width: 257px;
+}
+
+.container-category {
+  display: flex;
+}
+
+.container-category-store {
+  overflow-y: scroll;
+  width: calc(100% - 257px);
+  height: calc(100vh - 85px);
+}

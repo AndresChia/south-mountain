@@ -1,0 +1,54 @@
+@import "/src/foundations/typography/typography.scss";
+@import "/src/foundations/colors/colors.scss";
+@import "/src/foundations/responsive/responsive.scss";
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+  @include small {
+    grid-template-columns: 100%;
+  }
+}
+
+.container-icon {
+  height: 100%;
+  background-color: $primary-color-1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  &__title {
+    text-align: center;
+  }
+}
+
+.container-action {
+  width: 80%;
+  &__forgot-password {
+    font-family: "proxima-nova-regular", Roboto, "Helvetica Neue", sans-serif;
+    text-align: end;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.container-fields {
+  width: 80%;
+}
+
+.container-fields-input {
+  &__label {
+    margin: 10px 0px;
+    @include h5-bold;
+  }
+}

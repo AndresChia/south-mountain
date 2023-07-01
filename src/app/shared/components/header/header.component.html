@@ -1,0 +1,92 @@
+<div class="container-header">
+  <div class="container-logo">
+    <img
+      class="container-logo__image"
+      [routerLink]="['/store/home']"
+      src="../../../../assets/images/logo2.svg"
+      alt="sout-mountain-creamery-logo"
+    />
+  </div>
+
+  <div class="container-menu">
+    <!-- MOBILE -->
+    <ng-container *ngIf="isMobile">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="expand_less"
+        class="container-menu__icon"
+        (click)="openMenu()"
+      >
+        menu
+      </mat-icon>
+    </ng-container>
+
+    <!-- DESKTOP -->
+    <ng-container *ngIf="!isMobile">
+      <button
+        *ngFor="let menu of menus"
+        class="container-button-menu"
+        mat-button
+        [matMenuTriggerFor]="matMenu"
+        [matMenuTriggerData]="{ submenus: menu.submenus, menu: menu }"
+        (click)="menu.opened = true"
+      >
+        <h5 class="container-button-menu-title">
+          {{ menu.title }}
+
+          <mat-icon
+            aria-hidden="false"
+            aria-label="expand_less"
+            class="container-button-menu-title__icon"
+          >
+            {{ menu.opened ? "expand_less" : "expand_more" }}
+          </mat-icon>
+        </h5>
+      </button>
+
+      <mat-menu #matMenu="matMenu" (closed)="closeMenus()" matMenuContent>
+        <ng-template matMenuContent let-submenus="submenus" let-menu="menu">
+          <button *ngFor="let submenu of submenus" mat-menu-item>
+            {{ submenu.title }}
+          </button>
+        </ng-template>
+      </mat-menu>
+    </ng-container>
+  </div>
+
+  <div class="container-settings">
+    <!-- MOBILE -->
+    <ng-container *ngIf="isMobile">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="expand_less"
+        class="container-settings__icon"
+      >
+        search
+      </mat-icon>
+
+      <mat-icon
+        aria-hidden="false"
+        aria-label="expand_less"
+        class="container-settings__icon"
+      >
+        shopping_cart
+      </mat-icon>
+    </ng-container>
+
+    <!-- DESKTOP -->
+    <ng-container *ngIf="!isMobile">
+      <h5 class="container-settings-title">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="expand_less"
+          class="container-settings-title__icon"
+        >
+          account_circle_outline
+        </mat-icon>
+
+        {{ login ? session.name : "Login in | Sign in" }}
+      </h5>
+    </ng-container>
+  </div>
+</div>

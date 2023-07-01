@@ -1,0 +1,160 @@
+@import "/src/foundations/colors/colors.scss";
+
+@font-face {
+  font-family: "proxima-nova-black";
+  src: url("./proxima-nova-black.otf") format("otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova-extra-bold";
+  src: url("./proxima-nova-extrabold.otf") format("otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova-bold";
+  src: url("./proxima-nova-bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova-semi-bold";
+  src: url("./proxima-nova-semibold.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova-regular";
+  src: url("./proxima-nova-regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova-light";
+  src: url("./proxima-nova-light.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima-nova-extra-light";
+  src: url("./proxima-nova-light.otf") format("otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "proxima-nova-bold", Roboto, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  color: $base-color-3;
+  line-height: auto;
+}
+
+@mixin fontGenerator(
+  $weight,
+  $size,
+  $line-height,
+  $letter-spacing: normal,
+  $family: "proxima-nova-regular"
+) {
+  font-family: $family, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin h1-bold {
+  @include fontGenerator(bold, 48px, auto, normal, "proxima-nova-bold");
+}
+
+@mixin h2-bold {
+  @include fontGenerator(100, 34px, 45px, normal, "proxima-nova-semi-bold");
+}
+
+@mixin h3-semibold {
+  @include fontGenerator(bold, 24px, 30px, normal, "proxima-nova-bold");
+}
+
+@mixin h3-button {
+  @include fontGenerator(bold, 24px, 30px, 3.35px, "proxima-nova-bold");
+}
+
+@mixin h4-bold {
+  @include fontGenerator(bold, 20px, 27px, normal, "proxima-nova-bold");
+}
+
+@mixin h4-button {
+  @include fontGenerator(bold, 20px, 30px, 2.75px, "proxima-nova-bold");
+}
+
+@mixin h5-regular {
+  @include fontGenerator(100, 18px, 24px, normal, "proxima-nova-regular");
+}
+
+@mixin h5-bold {
+  @include fontGenerator(bold, 18px, 24px, normal, "proxima-nova-bold");
+}
+
+@mixin h6-regular {
+  @include fontGenerator(400, 16px, 20px, normal, "proxima-nova-regular");
+}
+
+@mixin h6-bold {
+  @include fontGenerator(bold, 16px, 20px, normal, "proxima-nova-bold");
+}
+
+@mixin h6-button {
+  @include fontGenerator(100, 16px, 20px, 3px, "proxima-nova-bold");
+}
+
+@mixin h7-regular {
+  @include fontGenerator(100, 14px, 19px, normal, "proxima-nova-regular");
+}
+
+@mixin h7-semibold {
+  @include fontGenerator(100, 14px, 19px, normal, "proxima-nova-semi-bold");
+}
+
+@mixin h7-underlined {
+  @include fontGenerator(100, 14px, 19px, normal, "proxima-nova-regular");
+  text-decoration: underline;
+}
+
+@mixin h7-button {
+  @include fontGenerator(bold, 14px, 19px, 1.35px, "proxima-nova-bold");
+}
+
+@mixin h8-regular {
+  @include fontGenerator(100, 12px, 45px, normal, "proxima-nova-regular");
+}
+
+@mixin h8-bold {
+  @include fontGenerator(bold, 12px, 14px, normal, "proxima-nova-bold");
+}
+
+@mixin h8-underlined {
+  @include fontGenerator(100, 12px, 14px, normal, "proxima-nova-regular");
+  text-decoration: underline;
+}
+
+@mixin h9-regular {
+  @include fontGenerator(100, 10px, 14px, 15px, "proxima-nova-regular");
+}
+
+@mixin h9-bold {
+  @include fontGenerator(bold, 10px, 45px, 15px, "proxima-nova-bold");
+}
+
+@mixin h9-underlined {
+  @include fontGenerator(100, 10px, 45px, 15px, "proxima-nova-regular");
+  text-decoration: underline;
+}
+

@@ -1,0 +1,46 @@
+<div class="container-card">
+  <div class="container-header">
+    <div class="container-labels">
+      <mat-chip-listbox aria-label="Fish selection" class="container-chips">
+        <mat-chip-option
+          *ngFor="let label of labels"
+          color="Primary"
+          class="container-chips__chip"
+        >
+          {{ label }}
+        </mat-chip-option>
+      </mat-chip-listbox>
+
+      <mat-icon
+        aria-hidden="false"
+        aria-label="favorite_border"
+        class="container-labels__favorite"
+      >
+        favorite_border
+      </mat-icon>
+    </div>
+  </div>
+  <div class="container-body">
+    <h2>{{ title }}</h2>
+    <img [src]="image" [alt]="title" />
+    <div class="container-price">
+      <h3>
+        {{ price }}
+      </h3>
+      <div class="container-quantity">
+        <app-button class="container-quantity__button-minus"> - </app-button>
+        <app-input
+          class="container-quantity__input"
+          [data]="quantity"
+          (ngModelChange)="quantity = $event"
+        >
+        </app-input>
+        <app-button class="container-quantity__button-plus"> + </app-button>
+      </div>
+      <h6>{{ description }}</h6>
+    </div>
+  </div>
+  <div class="container-footer">
+    <app-button class="container-footer__button"> add to cart </app-button>
+  </div>
+</div>
